@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title  %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <br><br>
+    <div class="row" id="menu_opcoes">
+            <div class="col">
+
+                <!-- Menu -->
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/menu_viagem/">Pedidos</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/menu_drone/">Drones</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/menu_rota/">Rotas</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/menu_droneport/">Droneports</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/menu_empresa/">Empresas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <img src="{% static 'img/fundo.webp' %}" style="position: fixed; top: 30%; right: 0%;">
+{% endblock %}

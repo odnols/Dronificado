@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title  %}
+    Lista de Droneports
+{% endblock %}
+
+{% block main %}<br>
+
+    <!-- Componente de Pesquisa -->
+    <nav class="navbar navbar-expand-sm" id="caixa_pesquisa">
+        <form class="form-inline" method="post">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2" type="text" name="apelido" placeholder="Pesquisa por Apelido">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+        </form>
+    </nav><br>
+
+    <button type="button" class="btn btn-danger" id="btn-voltar" onclick="location.href='/menu_droneport/'">Voltar</button>
+
+    <!-- Info-->
+    {% if messages %}
+        {% for mensagem in messages %}
+            <div class="alert alert-success alert-dismissible" id="mensagens_feedback">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ mensagem }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Componente de Listagem -->
+    <ul class="list-group">
+
+    {% for dronpt in droneports %}
+
+        <li class="list-group-item">
+
+            Localização: {{ dronpt.localizacao }}
+
+            &nbsp; &nbsp; <a class="btn btn-secondary" href="{% url 'url_atualiza_droneport' dronpt.id %}">Editar</a>
+            &nbsp; &nbsp; <a class="btn btn-danger" href="{% url 'url_exclui_droneport' dronpt.id %}">Excluir</a>
+
+            <br><br>
+
+            Apelido: {{ dronpt.apelido }} <br>
+
+            Capacidade Suportada: {{ dronpt.capacidadeSuportada }} <br>
+
+        </li><br>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title  %}
+    Drones
+{% endblock %}
+
+{% block main %}
+
+    <div class="row" id="menu_opcoes">
+            <div class="col"> <br><br>
+
+                <!-- Menu -->
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastro_drone/">Cadastrar Drone</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listagem_drones/">Listar Drones</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mapa_drones/">Exibir Mapa de Drones</a>
+                    </li><br>
+                </ul>
+            </div>
+        </div>
+
+    <img src="{% static 'img/menu_drone.png' %}" id="menu_drone">
+
+    <button type="button" class="btn btn-danger" id="btn-voltar" onclick="location.href='/'">Voltar</button>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title  %}
+    Informações de Rota
+{% endblock %}
+
+{% block main %}
+
+    <button type="button" class="btn btn-danger" id="btn-voltar" onclick="location.href='/menu_rota/'">Voltar</button>
+
+    <div id="informacoes">
+        <h2>As Rotas</h2><br>
+        <h5>As rotas são criadas a partir de dois droneports, elas possuem apelidos<br> e 2 coordenadas,
+        uma inicial e outra final.<br><br>As rotas são necessárias, pois é por elas onde os drones podem trafegar<br>
+            de forma segura e eficaz.<br><br><br>Elas são essenciais para a operação dos drones.</h5>
+    </div>
+
+    <img src="{% static 'img/mapa_fundo.jpg' %}" class="fundo_rota2">
+
+{% endblock %}

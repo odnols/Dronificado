@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> {%  block title %}{% endblock %}</title>
+
+    <link rel="shortcut icon" href="{% static 'img/Icone.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animacoes.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        #barra-topo{
+            background-image: url( "{% static 'img/mosaico.png' %}");
+        }
+    </style>
+</head>
+<body>
+    <div id="cor_fundo"></div>
+
+    <div class="container-fluid">
+        <div class="text-center" id="barra-topo">
+            <h3> {{ acao }} </h3>
+        </div>
+
+        <div id="conteudo_pag">
+            {% block main %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

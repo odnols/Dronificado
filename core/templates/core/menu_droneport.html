@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title  %}
+    Droneports
+{% endblock %}
+
+{% block main %}
+
+    <div class="row" id="menu_opcoes">
+            <div class="col"> <br><br>
+
+                <!-- Menu -->
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastro_droneport/">Cadastrar Droneport</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listagem_droneports/">Listar Droneports</a>
+                    </li><br>
+                </ul>
+            </div>
+        </div>
+
+    <img src="{% static 'img/menu_droneport.png' %}" id="menu_droneport">
+
+    <button type="button" class="btn btn-danger" id="btn-voltar" onclick="location.href='/'">Voltar</button>
+{% endblock %}

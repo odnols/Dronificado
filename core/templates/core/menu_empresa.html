@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title  %}
+    Empresas
+{% endblock %}
+
+{% block main %}
+
+    <div class="row" id="menu_opcoes">
+            <div class="col"> <br><br>
+
+                <!-- Menu -->
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastro_empresa/">Cadastrar Empresa</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listagem_empresas/">Listar Empresas</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastro_contrato/">Iniciar Contrato</a>
+                    </li><br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listagem_contratos/">Listar Contratos</a>
+                    </li><br>
+                </ul>
+            </div>
+        </div>
+
+     <img src="{% static 'img/icon_empresa.png' %}" id="menu_empresa">
+
+    <button type="button" class="btn btn-danger" id="btn-voltar" onclick="location.href='/'">Voltar</button>
+{% endblock %}

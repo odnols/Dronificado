@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title  %}
+    Lista de Drones
+{% endblock %}
+
+{% block main %}<br>
+
+    <!-- Componente de Pesquisa -->
+    <nav class="navbar navbar-expand-sm" id="caixa_pesquisa">
+        <form class="form-inline" method="post">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2" type="text" name="cnpj"  placeholder="Pesquisa por CNPJ">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+        </form>
+    </nav><br>
+
+    <button type="button" class="btn btn-danger" id="btn-voltar" onclick="location.href='/menu_empresa/'">Voltar</button>
+
+    <!-- Info-->
+    {% if messages %}
+        {% for mensagem in messages %}
+            <div class="alert alert-success alert-dismissible" id="mensagens_feedback">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ mensagem }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Componente de Listagem -->
+    <ul class="list-group">
+
+    {% for emp in empresas %}
+
+        <li class="list-group-item">
+            <div style="float: left">
+                CNPJ: {{ emp.cnpj }}
+
+                &nbsp; &nbsp; <a class="btn btn-secondary" href="{% url 'url_atualiza_empresa' emp.id %}">Editar</a>
+                &nbsp; &nbsp; <a class="btn btn-danger" href="{% url 'url_exclui_empresa' emp.id %}">Excluir</a>
+
+                <br><br>
+
+                Nome: {{ emp.nome }} <br>
+
+                Telefone: {{ emp.telefone }} <br>
+
+            </div>
+            <div class="row" id="caixa_endereco">
+
+                {% if emp.logo %}
+                    <img src="{{ emp.logo.url }}" class="logo_empresa">
+                {% else %}
+                    <img src="{% static 'img/empresa_generico.png' %}" class="logo_empresa">
+                {% endif %}
+
+                Endereço<br>
+
+                Cidade: {{ emp.cidade }} <br>
+
+                Estado: {{ emp.estado }} <br>
+
+                Logradouro: {{ emp.logradouro }} <br>
+
+                Número na rua: {{ emp.numeroRua }} <br>
+            </div>
+        </li><br>
+    {% endfor %}
+    </ul>
+{% endblock %}

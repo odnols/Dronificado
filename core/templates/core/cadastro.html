@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title  %}
+    Contrato
+{% endblock %}
+
+{% block main %}
+
+    <button type="button" class="btn btn-danger" id="btn-voltar" onclick="location.href='{{ redirect }}'">Voltar</button>
+
+    <form class="formulario_cadastro" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form | bootstrap }}
+
+        <button type="submit" class="btn btn-primary"> {{ caso }} </button>
+        <button type="button" class="btn btn-secondary" onclick="location.href='/'">Cancelar</button>
+    </form>
+    
+{% endblock %}
