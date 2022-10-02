@@ -1,0 +1,192 @@
+#barra-topo{
+    background-color: rgba(0, 0, 0, .5);
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    z-index: 3;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 0px 0px 15px black;
+}
+a.nav-link{
+    color: white;
+    transition: color .5s;
+}
+a.nav-link:hover{
+    color: yellow;
+}
+#cor_fundo{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: linear-gradient(lightgrey, #3e7575);
+}
+div#menu_opcoes{
+    position: absolute;
+    padding-left: 70px;
+    padding-top: 70px;
+}
+#caixa_pesquisa{
+    position: fixed;
+    top: 15px;
+    z-index: 3;
+    right: 20px;
+}
+#btn-voltar{
+    position: fixed;
+    box-shadow: 0px 0px 5px black;
+    left: 35px;
+    top: 23px;
+    width: 150px;
+    z-index: 6;
+}
+.nav-item{
+    background-color: rgba(0, 0, 0, .8);
+    text-shadow: 0px 0px 2px black;
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 15px black;
+    transition: background-color .5s, box-shadow .5s, transform .5s;
+    font-size: 25px;
+    color: white;
+}
+.nav-item:hover{
+    transform: scale(.95);
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 10px white;
+}
+#caixa_endereco{
+    float: right;
+    max-width: 500px;
+    width: 500px;
+}
+.btn{
+    box-shadow: 1px 1px 2px black;
+}
+.confirma_exclusao{
+    z-index: 2;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    left: 0px;
+}
+.logo_empresa{
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+}
+.icon_drone{
+    width: 200px;
+    position: absolute;
+    right: 10%;
+}
+.foto_carga{
+    width: 200px;
+    padding-right: 10%;
+}
+a{
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.fundo_rota{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: .6;
+    z-index: 1;
+    animation: aparece_bloco 1s;
+}
+.fundo_rota2{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: .6;
+    z-index: 1;
+}
+.list-group{
+    padding-top: 70px;
+    position: absolute;
+    z-index: 2;
+    width: 97%;
+}
+.list-group-item{
+    box-shadow: 0px 0px 15px black;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 50px;
+    background-color: black;
+}
+#mensagens_feedback{
+    box-shadow: 5px 5px 15px black;
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    bottom: 15px;
+    z-index: 5;
+    animation: mostra_msg .5s;
+}
+.formulario_cadastro{
+    color: black;
+    z-index: 2;
+    position: absolute;
+    width: 50%;
+    padding-top: 100px;
+    left: 50px;
+    font-size: 25px;
+    padding-bottom: 50px;
+}
+#menu_caixas{
+    position: fixed;
+    width: 600px;
+    right: 10%;
+    top: 10%;
+}
+#menu_empresa{
+    position: fixed;
+    width: 300px;
+    right: 20%;
+    top: 25%;
+}
+#menu_droneport{
+    position: fixed;
+    width: 450px;
+    transform: rotateZ(-30deg);
+    right: 15%;
+    top: 20%;
+}
+#menu_drone{
+    position: fixed;
+    width: 450px;
+    right: 15%;
+    top: 20%;
+}
+#mapa{
+    width: 90%;
+    left: 5%;
+    top: 15%;
+    height: 80%;
+    box-shadow: 0px 0px 15px;
+    position: fixed;
+    overflow: scroll;
+}
+#mapa_draggrable{
+    object-fit: cover;
+    width: 1593px;
+    height: 1600px;
+}
+#informacoes{
+    z-index: 3;
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px black;
+    position: absolute;
+    top: 20%;
+    left: 7%;
+}

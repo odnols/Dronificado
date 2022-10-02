@@ -1,0 +1,17 @@
+@keyframes aparece_bloco {
+    from{ opacity: 0; }
+    to{ opacity: .6; }
+}
+@keyframes muda_cor {
+    0% { background-color: midnightblue; }
+    20% { background-color: #090981; }
+    25% { background-color: #2121b3; }
+    50% { background-color: #111196; }
+    70% { background-color: midnightblue; }
+    90% { background-color: #101054; }
+    100% { background-color: midnightblue; }
+}
+@keyframes mostra_msg {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

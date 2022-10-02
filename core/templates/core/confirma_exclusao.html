@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Confirmação
+{% endblock %}
+
+{% block main %}
+    <div style="padding-top: 20%;" class="confirma_exclusao">
+    <h3>Deseja realmente excluir {{ valor }}?</h3>
+
+    <form method="post">
+    {% csrf_token %}
+        <button type="button" class="btn btn-success" onclick="location.href='{{ redirect }}'" style="width: 100px">Não</button> &nbsp; &nbsp; &nbsp;
+        <button type="submit" class="btn btn-danger" style="width: 100px">Sim</button>
+    </form>
+    </div>
+{% endblock %}

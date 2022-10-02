@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title  %}
+    Mapa de Drones
+{% endblock %}
+
+{% block main %}
+
+    <button type="button" class="btn btn-danger" id="btn-voltar" onclick="location.href='/menu_drone/'">Voltar</button>
+
+    <div id="mapa">
+        <img src="{% static 'img/mapa_drones.jpg' %}" id="mapa_draggrable">
+    </div>
+{% endblock %}
